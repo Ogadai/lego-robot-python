@@ -1,0 +1,9 @@
+
+#!/bin/bash
+
+cd ../mjpg-streamer/mjpg-streamer-experimental
+export LD_LIBRARY_PATH=.
+
+echo "Starting Video Stream"
+./mjpg_streamer -o "output_http.so -w ./www -p 3001" -i "input_raspicam.so -x 640 -y 480 -fps 15 -hf -vf -quality 100"
+
